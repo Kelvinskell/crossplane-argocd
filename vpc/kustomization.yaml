@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - igw.yaml
+  - natgw.yaml
+  - routes.yaml
+  - subnets.yaml
+  - vpc.yaml
+  - eip.yaml
