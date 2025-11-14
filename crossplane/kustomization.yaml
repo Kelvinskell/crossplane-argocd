@@ -4,4 +4,3 @@ resources:
   - ../providers
   - ../s3
   - ../vpc
-  - ../irsa
