@@ -12,3 +12,4 @@ spec:
     region: eu-west-1
   providerConfigRef:
     name: default
+    

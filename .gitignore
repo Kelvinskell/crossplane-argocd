@@ -1,1 +1,1 @@
-providers/aws-credentials.txt
+git check-ignore -v providers/aws-credentials.txt
