@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
   - provider-aws-config.yaml
   - provider-aws-iam.yaml
-  - provider-s3.yaml
+  - provider-aws-s3.yaml
   - provider-ec2.yaml
   - provider-eks.yaml
