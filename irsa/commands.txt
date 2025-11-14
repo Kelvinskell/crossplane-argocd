@@ -1,0 +1,15 @@
+# Ensure EKS OIDC is enabled on cluster 
+eksctl utils associate-iam-oidc-provider --cluster crossplane-demo --approve
+
+# Create IAM role and update the trust policy
+"<OIDC_PROVIDER>:sub": "system:serviceaccount:<NAMESPACE>:<SERVICE_ACCOUNT_NAME>",
+
+# Create a DeploymentRuntimeConfig that uses the SA:
+apiVersion: pkg.crossplane.io/v1beta1
+kind: DeploymentRuntimeConfig
+metadata:
+  name: provider-aws-irsa
+spec:
+  serviceAccountName: provider-aws
+
+# Reference it for each provider

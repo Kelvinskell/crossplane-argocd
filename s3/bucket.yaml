@@ -1,0 +1,14 @@
+apiVersion: s3.aws.upbound.io/v1beta1
+kind: Bucket
+metadata:
+  annotations:
+    meta.upbound.io/example-id: s3/v1beta1/bucketlogging
+  labels:
+    testing.upbound.io/bucket-name: crossplane_test_bucket
+  name: crossplane-test-bucket-1002002
+  namespace: infra-dev
+spec:
+  forProvider:
+    region: eu-west-1
+  providerConfigRef:
+    name: default

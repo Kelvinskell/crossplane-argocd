@@ -1,0 +1,11 @@
+---
+apiVersion: pkg.crossplane.io/v1beta1
+kind: DeploymentRuntimeConfig
+metadata:
+  name: provider-aws-irsa
+spec:
+  serviceAccountTemplate:
+    metadata:
+      name: provider-aws  
+      annotations:
+        eks.amazonaws.com/role-arn: arn:aws:iam::538578370232:role/crossplane-demo-role

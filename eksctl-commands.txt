@@ -1,0 +1,16 @@
+# Install cluster
+eksctl create cluster \
+--name crossplane-demo \
+--region eu-west-1 \
+--version 1.34  \
+--nodes 1
+
+# Update Kubeconfig
+aws eks update-kubeconfig \
+--region eu-west-1 \
+--name crossplane-demo 
+
+# Delete cluster
+eksctl delete cluster \
+--name crossplane-demo \
+--region eu-west-1
